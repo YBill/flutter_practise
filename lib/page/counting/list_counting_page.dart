@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'bloc/counting_provider.dart';
 import 'original/original_counting_view.dart';
 
-class ListCountingView extends StatelessWidget {
-  const ListCountingView({super.key});
+class ListCountingPage extends StatelessWidget {
+  const ListCountingPage({super.key});
 
   @override
   Widget build(BuildContext context) {

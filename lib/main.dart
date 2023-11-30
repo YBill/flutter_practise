@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'counting/list_counting_view.dart';
+import 'package:flutter_practise/page/counting/list_counting_page.dart';
+import 'package:flutter_practise/page/gridview/gridview_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +36,11 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _renderButton('Counting', () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const ListCountingView()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const ListCountingPage()));
+            }),
+            const SizedBox(height: 20),
+            _renderButton('GridView', () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const GridViewPage()));
             })
           ],
         )));

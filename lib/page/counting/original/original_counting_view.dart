@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practise/counting/bloc/counting_state.dart';
+import 'package:flutter_practise/page/counting/bloc/counting_state.dart';
 import 'package:flutter_practise/widget/outline_button.dart';
 
 class OriginalCountingView extends StatefulWidget {
