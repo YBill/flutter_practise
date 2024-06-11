@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practise/page/counting/list_counting_page.dart';
+import 'package:flutter_practise/page/getit/di/di.dart';
+import 'package:flutter_practise/page/getit/get_it_use_page.dart';
 import 'package:flutter_practise/page/gridview/gridview_page.dart';
 
 void main() {
+  initModule(); // di
   runApp(const MyApp());
 }
 
@@ -35,8 +38,12 @@ class MyHomePage extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _renderButton('Counting', () {
+            _renderButton('Bloc示例', () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const ListCountingPage()));
+            }),
+            const SizedBox(height: 20),
+            _renderButton('GetIt示例', () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const GetItUsePage()));
             }),
             const SizedBox(height: 20),
             _renderButton('GridView', () {
