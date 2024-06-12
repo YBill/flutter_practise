@@ -54,6 +54,17 @@ class _CountingViewState extends State<CountingView> {
   }
 
   Widget _renderTitle() {
+    /// 使用BlocSelector和 BlocBuilder 能达到同样的效果
+
+    /*return BlocSelector<CountingBloc, CountingState, int>(selector: (state) {
+      return state.counter;
+    }, builder: (context, counter) {
+      return Text(
+        '$counter',
+        style: Theme.of(context).textTheme.headlineMedium,
+      );
+    });*/
+
     return BlocBuilder<CountingBloc, CountingState>(buildWhen: (oldState, newState) {
       // print('------------- BlocBuilder buildWhen -- oldNum = ${oldState.counter}, newNum = ${newState.counter}');
       // true:执行builder,false:不执行builder
