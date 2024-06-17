@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_practise/page/counting/list_counting_page.dart';
 import 'package:flutter_practise/page/getit/di/di.dart';
 import 'package:flutter_practise/page/getit/get_it_use_page.dart';
 import 'package:flutter_practise/page/gridview/gridview_page.dart';
+import 'package:flutter_practise/presentation/navigation/navigation_manager.dart';
+import 'package:flutter_practise/src/string/string_manager.dart';
 
 void main() {
   initModule(); // di
@@ -15,6 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      localeResolutionCallback: (locale, supportedLocales) {
+
+      },
+      navigatorKey: NavigationApp.navigatorKey,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -46,7 +55,7 @@ class MyHomePage extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const GetItUsePage()));
             }),
             const SizedBox(height: 20),
-            _renderButton('GridView', () {
+            _renderButton(StringsApp.gridview, () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const GridViewPage()));
             })
           ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practise/fonts/font_manager.dart';
+import 'package:flutter_practise/src/fonts/font_manager.dart';
 
 class TextStylesApp {
   ///weight: 300

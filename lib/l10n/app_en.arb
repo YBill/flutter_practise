@@ -1,0 +1,6 @@
+{
+    "@@locale": "en",
+
+    "gridview": "GridView",
+    "time": "#value#hour"
+}

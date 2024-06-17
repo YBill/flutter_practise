@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practise/fonts/font_manager.dart';
-import 'package:flutter_practise/styles/text_styles_app.dart';
+import 'package:flutter_practise/src/fonts/font_manager.dart';
+import 'package:flutter_practise/src/styles/text_styles_app.dart';
 
 class OutlinedButtonApp extends StatelessWidget {
   final VoidCallback? onPressed;
