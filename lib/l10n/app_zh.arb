@@ -1,5 +1,17 @@
 {
     "@@locale": "zh",
 
-    "gridview": "画廊"
+    "timeLabel": "时间",
+    "time": "{hour} 小时 {minute} 分钟",
+    "@time": {
+        "description": "xxx 小时 yyy 分钟",
+        "placeholders": {
+            "hour": {
+                "type": "int"
+            },
+            "minute": {
+                "type": "int"
+            }
+        }
+    }
 }

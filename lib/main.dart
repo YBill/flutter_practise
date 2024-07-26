@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      localeResolutionCallback: (locale, supportedLocales) {
-
-      },
+      localeResolutionCallback: (locale, supportedLocales) {},
       navigatorKey: NavigationApp.navigatorKey,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -47,6 +45,14 @@ class MyHomePage extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('${StringsApp.timeLabel}:'),
+                Text(StringsApp.time(1, 10)),
+              ],
+            ),
+            const SizedBox(height: 20),
             _renderButton('Bloc示例', () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const ListCountingPage()));
             }),
@@ -55,7 +61,7 @@ class MyHomePage extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const GetItUsePage()));
             }),
             const SizedBox(height: 20),
-            _renderButton(StringsApp.gridview, () {
+            _renderButton('GridView', () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const GridViewPage()));
             })
           ],

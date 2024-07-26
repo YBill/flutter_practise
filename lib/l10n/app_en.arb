@@ -1,6 +1,17 @@
 {
     "@@locale": "en",
 
-    "gridview": "GridView",
-    "time": "#value#hour"
+    "timeLabel": "Time",
+    "time": "{hour} hour {minute} minutes",
+    "@time": {
+        "description": "xxx hour, yyy minute",
+        "placeholders": {
+            "hour": {
+                "type": "int"
+            },
+            "minute": {
+                "type": "int"
+            }
+        }
+    }
 }

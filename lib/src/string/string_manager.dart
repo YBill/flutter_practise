@@ -9,7 +9,9 @@ class StringsApp {
     return null;
   }
 
-  static String replaceValue = '#value#';
+  static String get timeLabel => getLocalization()?.timeLabel ?? '';
 
-  static String get gridview => getLocalization()?.gridview ?? '';
+  static String time(int hour, int minute) {
+    return getLocalization()?.time(hour, minute) ?? '';
+  }
 }
