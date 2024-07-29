@@ -46,9 +46,25 @@ output-localization-file: app_localizations.dart
 ```
 
 > @@locale 指明本地化的英文，当然你也可以不要这个声明。
-> 带参数的字符串没看到提供方法，暂时通过replace自己维护替换吧。
-```dart
-AppLocalizations.of(context).xxx.replaceAll('#value#', '1')
+> 带参数的字符串没使用下面方式指定，编译就会生成带参数的方法，比如下面time(int hour, String ma)
+> 单数复数?,暂不使用
+```json
+{
+  "timeLabel": "Time",
+  "time": "{hour} hour {ma}",
+  "@time": {
+    "description": "xxx hour, morning and afternoon",
+    "placeholders": {
+      "hour": {
+        "type": "int"
+      },
+      "ma": {
+        "type": "String",
+        "example": "am"
+      }
+    }
+  }
+}
 ```
 
 （4）生成代码：

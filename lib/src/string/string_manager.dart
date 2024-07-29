@@ -11,7 +11,7 @@ class StringsApp {
 
   static String get timeLabel => getLocalization()?.timeLabel ?? '';
 
-  static String time(int hour, int minute) {
-    return getLocalization()?.time(hour, minute) ?? '';
+  static String time(int hour, String ma) {
+    return getLocalization()?.time(hour, ma) ?? '';
   }
 }

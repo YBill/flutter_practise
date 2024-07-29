@@ -2,15 +2,16 @@
     "@@locale": "en",
 
     "timeLabel": "Time",
-    "time": "{hour} hour {minute} minutes",
+    "time": "{hour} hour {ma}",
     "@time": {
-        "description": "xxx hour, yyy minute",
+        "description": "xxx hour, morning and afternoon",
         "placeholders": {
             "hour": {
                 "type": "int"
             },
-            "minute": {
-                "type": "int"
+            "ma": {
+                "type": "String",
+                "example": "am"
             }
         }
     }

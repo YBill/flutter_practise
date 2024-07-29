@@ -2,15 +2,16 @@
     "@@locale": "zh",
 
     "timeLabel": "时间",
-    "time": "{hour} 小时 {minute} 分钟",
+    "time": "{hour} 小时 {ma}",
     "@time": {
-        "description": "xxx 小时 yyy 分钟",
+        "description": "xxx 小时, 上午下午",
         "placeholders": {
             "hour": {
                 "type": "int"
             },
-            "minute": {
-                "type": "int"
+            "ma": {
+                "type": "String",
+                "example": "上午"
             }
         }
     }

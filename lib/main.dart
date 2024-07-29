@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text('${StringsApp.timeLabel}:'),
-                Text(StringsApp.time(1, 10)),
+                Text(StringsApp.time(1, "am")),
               ],
             ),
             const SizedBox(height: 20),
